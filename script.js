@@ -30,6 +30,18 @@ function handleSubmit(event){
   <tr>
     <td>${affirmationText}</td>
     <td>${affirmationAuthor}</td>
+    <td><button onclick="deleteAffirmation(event)">❌</button></td>
   </tr>
   `
+  document.getElementById('affirmationText').value = "";
+  document.getElementById('affirmationAuthor').value = "";
+
+}
+
+function deleteAffirmation(event){
+
+  console.log("So, you want to delete?"); 
+  
+  event.target.parentElement.parentElement.remove();
+
 }
